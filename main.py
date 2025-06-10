@@ -76,21 +76,735 @@ REGIONS = {
 }
 
 map = [
-    [],[],[],
-    [],[],[],
-    [],[],[],
+        [
+            [
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+            ],
+            ""
+    ],
+        [
+            [
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+            ],
+            ""
+    ],
+        [
+            [
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+            ],
+            ""
+    ],
+        [
+            [
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+            ],
+            ""
+    ],
+        [
+            [
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+            ],
+            ""
+    ],
+        [
+            [
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+            ],
+            ""
+    ],
+        [
+            [
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+            ],
+            ""
+    ],
+        [
+            [
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+            ],
+            ""
+    ],
+        [
+            [
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+                [
+                    [
+                    "","","",
+                    "","","",
+                    "","",""
+                    ],
+                    ""
+                ],
+            ],
+            ""
+    ],
 ]
 
 SQUARES = 27
 SCREEN_SIZE = 540
 SQUARE_SIZE = SCREEN_SIZE/SQUARES
 
+FONT1 = ('Arial', 15, 'bold')
+FONT2 = ('Arial', 30, 'bold')
+FONT3 = ('Arial', 40, 'bold')
 
 screen = turtle.Screen() 
 screen.setup(SCREEN_SIZE,SCREEN_SIZE)
+screen.bgcolor(0,0,0)
 
 p1 = random.choice(["X","O"])
 p2 = "X" if p1 == "O" else "O"
+
+turn = p1
 
 print(f"Player 1 is {p1}")
 print(f"Player 2 is {p2}")
@@ -100,7 +814,7 @@ screen.tracer(0,0)
 
 turtle = turtle.Turtle()
 turtle.hideturtle()
-turtle.speed(100)
+turtle.speed(10)
 
 def map_(val,src,dst):
     return ((val - src[0]) / (src[1]-src[0])) * (dst[1]-dst[0]) + dst[0]
@@ -109,9 +823,8 @@ def drawLine(pos1,pos2,x,y):
     #print(pos1)
     #print(pos2)
     turtle.penup()
-    turtle.pencolor('blue')
+    turtle.pencolor('gray')
     turtle.pensize(1)
-
     if pos1[0] == pos2[0]: #Horizontal     
         if x in [2,5,11,14,20,23]:
             turtle.pencolor('yellow')
@@ -140,12 +853,139 @@ def drawLine(pos1,pos2,x,y):
         turtle.penup()
     turtle.pencolor('black')
     turtle.pensize(1)
+
+def getInfo(x,y):
+    address=[0,0,0]
+    bx = 0;by = 0
+    if x in range(1,10) and y in range(1,10):address[0] = 1;bx=1;by=1
+    elif x in range(10,19) and y in range(1,10):address[0] = 2;bx=2;by=1
+    elif x in range(19,28) and y in range(1,10):address[0] = 3;bx=3;by=1
+    elif x in range(1,10) and y in range(10,19):address[0] = 4;bx=1;by=2
+    elif x in range(10,19) and y in range(10,19):address[0] = 5;bx=2;by=2
+    elif x in range(19,28) and y in range(10,19):address[0] = 6;bx=3;by=2
+    elif x in range(1,10) and y in range(19,28):address[0] = 7;bx=1;by=3
+    elif x in range(10,19) and y in range(19,28):address[0] = 8;bx=2;by=3
+    elif x in range(19,28) and y in range(19,28):address[0] = 9;bx=3;by=3
+    mnx = ((bx-1)*9) if ((bx-1)*9) != 0 else 1
+    mny = ((by-1)*9) if ((by-1)*9) != 0 else 1
+    #print(f"Mod X: {mnx} \n bx: {bx}")
+    #print(f"Mod Y: {mny} \n by: {by}")
+    if mnx == mny == 1:
+        if x in range(1,4) and y in range(1,4):address[1] = 1
+        elif x in range(4,7) and y in range(1,4):address[1] = 2
+        elif x in range(7,10) and y in range(1,4):address[1] = 3
+        elif x in range(1,4) and y in range(4,7):address[1] = 4
+        elif x in range(4,7) and y in range(4,7):address[1] = 5
+        elif x in range(7,10) and y in range(4,7):address[1] = 6
+        elif x in range(1,4) and y in range(7,10):address[1] = 7
+        elif x in range(4,7) and y in range(7,10):address[1] = 8
+        elif x in range(7,10) and y in range(7,10):address[1] = 9
+    elif mny == 1:
+        if x in range(1+mnx,4+mnx) and y in range(1,4):address[1] = 1
+        elif x in range(4+mnx,7+mnx) and y in range(1,4):address[1] = 2
+        elif x in range(7+mnx,10+mnx) and y in range(1,4):address[1] = 3
+        elif x in range(1+mnx,3+mnx) and y in range(4,7):address[1] = 4
+        elif x in range(4+mnx,7+mnx) and y in range(4,7):address[1] = 5
+        elif x in range(7+mnx,10+mnx) and y in range(4,7):address[1] = 6
+        elif x in range(1+mnx,3+mnx) and y in range(7,10):address[1] = 7
+        elif x in range(4+mnx,7+mnx) and y in range(7,10):address[1] = 8
+        elif x in range(7+mnx,10+mnx) and y in range(7,10):address[1] = 9
+    elif mnx == 1:
+        if x in range(1,4) and y in range(1+mny,4+mny):address[1] = 1
+        elif x in range(4,7) and y in range(1+mny,4+mny):address[1] = 2
+        elif x in range(7,10) and y in range(1+mny,4+mny):address[1] = 3
+        elif x in range(1,4) and y in range(4+mny,7+mny):address[1] = 4
+        elif x in range(4,7) and y in range(4+mny,7+mny):address[1] = 5
+        elif x in range(7,10) and y in range(4+mny,7+mny):address[1] = 6
+        elif x in range(1,4) and y in range(7+mny,10+mny):address[1] = 7
+        elif x in range(4,7) and y in range(7+mny,10+mny):address[1] = 8
+        elif x in range(7,10) and y in range(7+mny,10+mny):address[1] = 9
+    else:
+        if x in range(1+mnx,4+mnx) and y in range(1+mny,4+mny):address[1] = 1
+        elif x in range(4+mnx,7+mnx) and y in range(1+mny,4+mny):address[1] = 2
+        elif x in range(7+mnx,10+mnx) and y in range(1+mny,4+mny):address[1] = 3
+        elif x in range(1+mnx,4+mnx) and y in range(4+mny,7+mny):address[1] = 4
+        elif x in range(4+mnx,7+mnx) and y in range(4+mny,7+mny):address[1] = 5
+        elif x in range(7+mnx,10+mnx) and y in range(4+mny,7+mny):address[1] = 6
+        elif x in range(1+mnx,4+mnx) and y in range(7+mny,10+mny):address[1] = 7
+        elif x in range(4+mnx,7+mnx) and y in range(7+mny,10+mny):address[1] = 8
+        elif x in range(7+mnx,10+mnx) and y in range(7+mny,10+mny):address[1] = 9
     
-def clickDetect(x,y):    
-    row = math.ceil(map_(y,(-SQUARE_SIZE * SQUARES / 2,SQUARE_SIZE * SQUARES / 2),(27,0)))
-    collumn = math.ceil(map_(x,(-SQUARE_SIZE * SQUARES / 2,SQUARE_SIZE * SQUARES / 2),(0,27)))
-    print(f"Row: {row}")
-    print(f"Collumn: {collumn}")
+
+    if x in [1,4,7,10,13,16,19,22,25] and y in [1,4,7,10,13,16,19,22,25]:
+        address[2] = 1
+    elif x in [2,5,8,11,14,17,20,23,26] and y in [1,4,7,10,13,16,19,22,25]:
+        address[2] = 2
+    elif x in [3,6,9,12,15,18,21,24,27] and y in [1,4,7,10,13,16,19,22,25]:
+        address[2] = 3
+    elif x in [1,4,7,10,13,16,19,22,25] and y in [2,5,8,11,14,17,20,23,26]:
+        address[2] = 4
+    elif x in [2,5,8,11,14,17,20,23,26] and y in [2,5,8,11,14,17,20,23,26]:
+        address[2] = 5
+    elif x in [3,6,9,12,15,18,21,24,27] and y in [2,5,8,11,14,17,20,23,26]:
+        address[2] = 6
+    elif x in [1,4,7,10,13,16,19,22,25] and y in [3,6,9,12,15,18,21,24,27]:
+        address[2] = 7
+    elif x in [2,5,8,11,14,17,20,23,26] and y in [3,6,9,12,15,18,21,24,27]:
+        address[2] = 8
+    elif x in [3,6,9,12,15,18,21,24,27] and y in [3,6,9,12,15,18,21,24,27]:
+        address[2] = 9
+
+    address[0] = address[0]-1
+    address[1] = address[1]-1
+    address[2] = address[2]-1
+    return address
+
+def TextAt(row,collumn,text:str,color,layer):
+    if layer == 1:
+        x = -250+(collumn * int(SQUARE_SIZE)-36)
+        y = 250-(row * int(SQUARE_SIZE)-17)
+    if layer == 2:
+        pass
+    if layer == 3:
+        pass
+    print(f"Text Pos : ({x},{y})")
+    turtle.teleport(x,y,fill_gap=False)
+    turtle.pencolor(color)
+    if layer == 3:
+        turtle.write(text,font=FONT3)
+    elif layer == 2:
+        turtle.write(text,font=FONT2)
+    else:
+        turtle.write(text,font=FONT1)
+
+def checkWin(addr,layer):
+    board = [
+        "","","",
+        "","","",
+        "","","",
+    ]
+    for i in range(9):
+        if layer == 3:
+            board[i] = map[addr[0]][1]
+        elif layer == 2:
+            board[i] = map[addr[0]][0][addr[1]][1]
+        elif layer == 1:
+            board[i] = map[addr[0]][0][addr[1]][0][i]
+    print(board)
+
+def clickDetect(x,y):
+    global turn,p1,p2
+    y_ = math.ceil(map_(y,(-SQUARE_SIZE * SQUARES / 2,SQUARE_SIZE * SQUARES / 2),(27,0)))
+    x_ = math.ceil(map_(x,(-SQUARE_SIZE * SQUARES / 2,SQUARE_SIZE * SQUARES / 2),(0,27)))
+    print(f"X: {x_}")
+    print(f"Y: {y_}")
+    addr = getInfo(x_,y_)
+    #print(addr)
+    #print(map[addr[0]][0][addr[1]][0][addr[2]])
+    if map[addr[0]][0][addr[1]][0][addr[2]] == "" and map[addr[0]][0][addr[1]][1] == "" and map[addr[0]][1] == "":
+        map[addr[0]][0][addr[1]][0][addr[2]] = turn
+        checkWin(addr,1)
+        TextAt(y_,x_,turn,"white",1)
+        drawBoard()
+        turn = p2 if turn == p1 else p1
+    else:
+        print(f"You can't your {turn} here!")
 
 screen.onclick(clickDetect,1)
 screen.cv._rootwindow.resizable(False, False)
@@ -154,10 +994,15 @@ def drawMap():
     for x in range(SQUARES):
         for y in range(SQUARES):
             drawLine((x*SQUARE_SIZE,250),(x*SQUARE_SIZE,-250),x,y)
-    
     for y in range(SQUARES):
         for x in range(SQUARES):
             drawLine((-250,y*SQUARE_SIZE),(250,y*SQUARE_SIZE),x,y)
 
+def drawBoard():
+    for layer in range(2,-1,-1):
+        print(layer)
+
 drawMap()
-screen.mainloop()
+drawBoard()
+while True:
+    screen.update()
