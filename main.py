@@ -1,6 +1,7 @@
 import turtle
 import math
 import random
+import time
 
 #sub layers:
 # 1- Normal Tic Tac Toe (Yellow Lines)
@@ -914,7 +915,6 @@ def getInfo(x,y):
         elif x in range(1+mnx,4+mnx) and y in range(7+mny,10+mny):address[1] = 7
         elif x in range(4+mnx,7+mnx) and y in range(7+mny,10+mny):address[1] = 8
         elif x in range(7+mnx,10+mnx) and y in range(7+mny,10+mny):address[1] = 9
-    
 
     if x in [1,4,7,10,13,16,19,22,25] and y in [1,4,7,10,13,16,19,22,25]:
         address[2] = 1
@@ -978,6 +978,7 @@ def TextAt(row,collumn,text:str,color,layer):
         turtle.write(text,font=FONT2)
     else:
         turtle.write(text,font=FONT1)
+    screen.update()
 
 def checkWin(addr,layer):
     board = []
@@ -1073,7 +1074,7 @@ def clickDetect(x,y):
                 rest[1] = addr[2]
             else: 
                 print("You need to play in the same square, because this one is occupied!")
-            TextAt(y_,x_,turn,"white",1)
+            ##TextAt(y_,x_,turn,"white",1)
             turn = p2 if turn == p1 else p1
             if turn == p2:screen.title(f"Tic-Tac-Cubed (Turn of Player 2: {p2})")
             else:screen.title(f"Tic-Tac-Cubed (Turn of Player 1: {p1})")
@@ -1087,6 +1088,7 @@ def clickDetect(x,y):
 
 screen.onclick(clickDetect,1)
 screen.cv._rootwindow.resizable(False, False)
+
 def drawSquare(x,y,width,color):
     turtle.penup()
     turtle.pencolor(color)
@@ -1098,24 +1100,26 @@ def drawSquare(x,y,width,color):
     turtle.goto(x,y-width)
     turtle.goto(x,y)
     turtle.end_fill()
+    screen.update()
 
 def drawMap():
-    if rest != [0,0]:
-        if rest[0] in range(1,4):
-            print("Showing region")
-            drawSquare(rest[0]*180,0,180,"red")
+    t1 = time.time()
     for x in range(SQUARES):
         for y in range(SQUARES):
             drawLine((x*SQUARE_SIZE,250),(x*SQUARE_SIZE,-250),x,y)
     for y in range(SQUARES):
         for x in range(SQUARES):
             drawLine((-250,y*SQUARE_SIZE),(250,y*SQUARE_SIZE),x,y)
+    print("map time: "+str((time.time()-t1)))
 
 def drawBoard():
     for x in range(0,28):
         for y in range(0,28):
             addr = getInfo(x,y)
-            TextAt(y,x,map[addr[0]][0][addr[1]][0][addr[2]],"white",1)
+            if map[addr[0]][0][addr[1]][0][addr[2]] != "":
+                TextAt(y,x,map[addr[0]][0][addr[1]][0][addr[2]],"white",1)
+    screen.update()
+
 drawMap()
 while True:
     screen.update()
