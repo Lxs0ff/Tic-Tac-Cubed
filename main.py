@@ -944,17 +944,17 @@ def TextAt(row,collumn,text:str,color,layer):
         row+=1
         collumn+=1
         if row in [1,2,3]:
-            if collumn in range(1,4):y=30;x=collumn*5
-            elif collumn in range(4,7):y=120;x=(collumn-3)*60
-            elif collumn in range(7,10):y=180;x=(collumn-6)*60
+            if collumn in range(1,4):y=30;x=(collumn*60) - 60
+            elif collumn in range(4,7):y=90;x=((collumn-3)*60) - 60
+            elif collumn in range(7,10):y=150;x=((collumn-6)*60) - 60
         elif row in [4,5,6]:
-            if collumn in range(1,4):y=240;x=collumn*60
-            elif collumn in range(4,7):y=300;x=(collumn-3)*60
-            elif collumn in range(7,10):y=360;x=(collumn-6)*60
+            if collumn in range(1,4):y=240;x=(collumn*60) - 60
+            elif collumn in range(4,7):y=300;x=((collumn-3)*60) - 60
+            elif collumn in range(7,10):y=360;x=((collumn-6)*60) - 60
         elif row in [7,8,9]:
-            if collumn in range(1,4):y=420;x=collumn*60
-            elif collumn in range(4,7):y=480;x=(collumn-3)*60
-            elif collumn in range(7,10):y=540;x=(collumn-6)*60
+            if collumn in range(1,4):y=420;x=(collumn*60) - 60
+            elif collumn in range(4,7):y=480;x=((collumn-3)*60) - 60
+            elif collumn in range(7,10):y=540;x=((collumn-6)*60) - 60
         x = -250+x
         y = 250-y
         print(f"Text Pos : ({x},{y})")
