@@ -930,21 +930,37 @@ def getInfo(x,y):
         address[2] = 8
     elif x in [3,6,9,12,15,18,21,24,27] and y in [3,6,9,12,15,18,21,24,27]:
         address[2] = 9
-
     address[0] = address[0]-1
     address[1] = address[1]-1
     address[2] = address[2]-1
     return address
 
 def TextAt(row,collumn,text:str,color,layer):
+    x=y=0
     if layer == 1:
         x = -250+(collumn * int(SQUARE_SIZE)-36)
         y = 250-(row * int(SQUARE_SIZE)-17)
-    if layer == 2:
-        pass
-    if layer == 3:
-        pass
-    print(f"Text Pos : ({x},{y})")
+    elif layer == 2:
+        row+=1
+        collumn+=1
+        if row in [1,2,3]:
+            if collumn in range(1,4):y=30;x=collumn*5
+            elif collumn in range(4,7):y=120;x=(collumn-3)*60
+            elif collumn in range(7,10):y=180;x=(collumn-6)*60
+        elif row in [4,5,6]:
+            if collumn in range(1,4):y=240;x=collumn*60
+            elif collumn in range(4,7):y=300;x=(collumn-3)*60
+            elif collumn in range(7,10):y=360;x=(collumn-6)*60
+        elif row in [7,8,9]:
+            if collumn in range(1,4):y=420;x=collumn*60
+            elif collumn in range(4,7):y=480;x=(collumn-3)*60
+            elif collumn in range(7,10):y=540;x=(collumn-6)*60
+        x = -250+x
+        y = 250-y
+        print(f"Text Pos : ({x},{y})")
+    elif layer == 3:
+        x = y = 1.5*SQUARE_SIZE
+        print(f"Text Pos : ({x},{y})")
     turtle.teleport(x,y,fill_gap=False)
     turtle.pencolor(color)
     if layer == 3:
@@ -955,19 +971,29 @@ def TextAt(row,collumn,text:str,color,layer):
         turtle.write(text,font=FONT1)
 
 def checkWin(addr,layer):
-    board = [
-        "","","",
-        "","","",
-        "","","",
-    ]
+    board = []
     for i in range(9):
         if layer == 3:
-            board[i] = map[addr[0]][1]
+            board.append(map[i][1])
         elif layer == 2:
-            board[i] = map[addr[0]][0][addr[1]][1]
+            board.append(map[addr[0]][0][i][1])
         elif layer == 1:
-            board[i] = map[addr[0]][0][addr[1]][0][i]
-    print(board)
+            board.append(map[addr[0]][0][addr[1]][0][i])
+    for i in range(3):
+        i = i*3
+        if board[0+i] == board[1+i] == board[2+i] and board[0+i] in ["X","O"]:
+            if layer == 3:
+                print(f"{board[0+i]} won the game!");screen.bye();exit()
+            elif layer == 2:
+                print(f"Layer 2 win by {board[0+i]}")
+                map[addr[0]][1] = board[0+i]
+                TextAt(addr[0],addr[1],board[0+i],"blue",3)
+                checkWin(addr,3)
+            elif layer == 1:
+                print(f"Layer 1 win by {board[0+i]}")
+                map[addr[0]][0][addr[1]][1] = board[0+i]
+                TextAt(addr[0],addr[1],board[0+i],"red",2)
+                checkWin(addr,2)
 
 def clickDetect(x,y):
     global turn,p1,p2
@@ -976,14 +1002,15 @@ def clickDetect(x,y):
     print(f"X: {x_}")
     print(f"Y: {y_}")
     addr = getInfo(x_,y_)
-    #print(addr)
+    print(addr)
     #print(map[addr[0]][0][addr[1]][0][addr[2]])
     if map[addr[0]][0][addr[1]][0][addr[2]] == "" and map[addr[0]][0][addr[1]][1] == "" and map[addr[0]][1] == "":
         map[addr[0]][0][addr[1]][0][addr[2]] = turn
         checkWin(addr,1)
         TextAt(y_,x_,turn,"white",1)
-        drawBoard()
         turn = p2 if turn == p1 else p1
+        if turn == p2:screen.title(f"Tic-Tac-Cubed (Turn of Player 2: {p2})")
+        else:screen.title(f"Tic-Tac-Cubed (Turn of Player 1: {p1})")
     else:
         print(f"You can't your {turn} here!")
 
@@ -998,11 +1025,6 @@ def drawMap():
         for x in range(SQUARES):
             drawLine((-250,y*SQUARE_SIZE),(250,y*SQUARE_SIZE),x,y)
 
-def drawBoard():
-    for layer in range(2,-1,-1):
-        print(layer)
-
 drawMap()
-drawBoard()
 while True:
     screen.update()
