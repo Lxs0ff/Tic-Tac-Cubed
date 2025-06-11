@@ -805,6 +805,10 @@ p1 = random.choice(["X","O"])
 p2 = "X" if p1 == "O" else "O"
 
 turn = p1
+freechose = True
+freechose2 = False
+freechose3 = False
+rest = [0,0]
 
 print(f"Player 1 is {p1}")
 print(f"Player 2 is {p2}")
@@ -961,8 +965,13 @@ def TextAt(row,collumn,text:str,color,layer):
     elif layer == 3:
         x = y = 1.5*SQUARE_SIZE
         print(f"Text Pos : ({x},{y})")
+    elif layer == 4:
+        x = collumn
+        y = row
     turtle.teleport(x,y,fill_gap=False)
     turtle.pencolor(color)
+    if layer == 4:
+        turtle.write(text,font=FONT3)
     if layer == 3:
         turtle.write(text,font=FONT3)
     elif layer == 2:
@@ -980,10 +989,11 @@ def checkWin(addr,layer):
         elif layer == 1:
             board.append(map[addr[0]][0][addr[1]][0][i])
     for i in range(3):
-        i = i*3
-        if board[0+i] == board[1+i] == board[2+i] and board[0+i] in ["X","O"]:
+        if board[0+(i)] == board[3+i] == board[6+i] and board[0+i] in ["X","O"]:
             if layer == 3:
-                print(f"{board[0+i]} won the game!");screen.bye();exit()
+                screen.clear()
+                TextAt(0,0,f"{board[0+i]} won the game!","White",4)
+                screen.exitonclick()
             elif layer == 2:
                 print(f"Layer 2 win by {board[0+i]}")
                 map[addr[0]][1] = board[0+i]
@@ -994,30 +1004,106 @@ def checkWin(addr,layer):
                 map[addr[0]][0][addr[1]][1] = board[0+i]
                 TextAt(addr[0],addr[1],board[0+i],"red",2)
                 checkWin(addr,2)
+        i = i*3
+        if board[0+i] == board[1+i] == board[2+i] and board[0+i] in ["X","O"]:
+            if layer == 3:
+                screen.clear()
+                TextAt(0,0,f"{board[0+i]} won the game!","White",4)
+                screen.exitonclick()
+            elif layer == 2:
+                print(f"Layer 2 win by {board[0+i]}")
+                map[addr[0]][1] = board[0+i]
+                TextAt(addr[0],addr[1],board[0+i],"blue",3)
+                checkWin(addr,3)
+            elif layer == 1:
+                print(f"Layer 1 win by {board[0+i]}")
+                map[addr[0]][0][addr[1]][1] = board[0+i]
+                TextAt(addr[0],addr[1],board[0+i],"red",2)
+                checkWin(addr,2)
+    if board[0] == board[4] == board[8] and board[0] in ["X","O"]:
+            if layer == 3:
+                screen.clear()
+                TextAt(0,0,f"{board[0]} won the game!","White",4)
+                screen.exitonclick()
+            elif layer == 2:
+                print(f"Layer 2 win by {board[0]}")
+                map[addr[0]][1] = board[0]
+                TextAt(addr[0],addr[1],board[0],"blue",3)
+                checkWin(addr,3)
+            elif layer == 1:
+                print(f"Layer 1 win by {board[0]}")
+                map[addr[0]][0][addr[1]][1] = board[0]
+                TextAt(addr[0],addr[1],board[0],"red",2)
+                checkWin(addr,2)
+    elif board[2] == board[4] == board[6] and board[2] in ["X","O"]:
+            if layer == 3:
+                screen.clear()
+                TextAt(0,0,f"{board[2]} won the game!","White",4)
+                screen.exitonclick()
+            elif layer == 2:
+                print(f"Layer 2 win by {board[2]}")
+                map[addr[0]][1] = board[2]
+                TextAt(addr[0],addr[1],board[2],"blue",3)
+                checkWin(addr,3)
+            elif layer == 1:
+                print(f"Layer 1 win by {board[2]}")
+                map[addr[0]][0][addr[1]][1] = board[2]
+                TextAt(addr[0],addr[1],board[2],"red",2)
+                checkWin(addr,2)
 
 def clickDetect(x,y):
-    global turn,p1,p2
+    global turn,p1,p2,freechose,rest
     y_ = math.ceil(map_(y,(-SQUARE_SIZE * SQUARES / 2,SQUARE_SIZE * SQUARES / 2),(27,0)))
     x_ = math.ceil(map_(x,(-SQUARE_SIZE * SQUARES / 2,SQUARE_SIZE * SQUARES / 2),(0,27)))
     print(f"X: {x_}")
     print(f"Y: {y_}")
     addr = getInfo(x_,y_)
-    print(addr)
+    print(f"Layer 3: {addr[0]}")
+    print(f"Layer 2: {addr[1]}")
+    print(f"Layer 1: {addr[2]}")
     #print(map[addr[0]][0][addr[1]][0][addr[2]])
     if map[addr[0]][0][addr[1]][0][addr[2]] == "" and map[addr[0]][0][addr[1]][1] == "" and map[addr[0]][1] == "":
-        map[addr[0]][0][addr[1]][0][addr[2]] = turn
-        checkWin(addr,1)
-        TextAt(y_,x_,turn,"white",1)
-        turn = p2 if turn == p1 else p1
-        if turn == p2:screen.title(f"Tic-Tac-Cubed (Turn of Player 2: {p2})")
-        else:screen.title(f"Tic-Tac-Cubed (Turn of Player 1: {p1})")
+        if addr[0] == rest[0] and addr[1] == rest[1] or freechose:
+            map[addr[0]][0][addr[1]][0][addr[2]] = turn
+            checkWin(addr,1)
+            if freechose:
+                freechose = False
+                rest[0] = addr[0]
+            if map[addr[0]][0][addr[2]][1] == "":
+                rest[1] = addr[2]
+            else: 
+                print("You need to play in the same square, because this one is occupied!")
+            TextAt(y_,x_,turn,"white",1)
+            turn = p2 if turn == p1 else p1
+            if turn == p2:screen.title(f"Tic-Tac-Cubed (Turn of Player 2: {p2})")
+            else:screen.title(f"Tic-Tac-Cubed (Turn of Player 1: {p1})")
+            turtle.clear()
+            drawMap()
+            drawBoard()
+        else:      
+            print(f"Not within restrictions!")
     else:
-        print(f"You can't your {turn} here!")
+        print(f"You can't place your {turn} here!")
 
 screen.onclick(clickDetect,1)
 screen.cv._rootwindow.resizable(False, False)
+def drawSquare(x,y,width,color):
+    turtle.penup()
+    turtle.pencolor(color)
+    turtle.begin_fill()
+    turtle.goto(x,y)
+    turtle.pendown()
+    turtle.goto(x+width,y)
+    turtle.goto(x+width,y-width)
+    turtle.goto(x,y-width)
+    turtle.goto(x,y)
+    turtle.end_fill()
 
 def drawMap():
+    if rest != [0,0]:
+        if rest[0] in range(1,4):
+            print("Showing region")
+            drawSquare(rest[0]*180,0,180,"red")
     for x in range(SQUARES):
         for y in range(SQUARES):
             drawLine((x*SQUARE_SIZE,250),(x*SQUARE_SIZE,-250),x,y)
@@ -1025,6 +1111,11 @@ def drawMap():
         for x in range(SQUARES):
             drawLine((-250,y*SQUARE_SIZE),(250,y*SQUARE_SIZE),x,y)
 
+def drawBoard():
+    for x in range(0,28):
+        for y in range(0,28):
+            addr = getInfo(x,y)
+            TextAt(y,x,map[addr[0]][0][addr[1]][0][addr[2]],"white",1)
 drawMap()
 while True:
     screen.update()
